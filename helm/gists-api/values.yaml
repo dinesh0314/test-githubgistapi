@@ -1,0 +1,12 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/dinesh0314/gists-api
+  pullPolicy: Always
+  tag: "latest"
+
+service:
+  type: NodePort
+  port: 8080
+
+resources: {}
