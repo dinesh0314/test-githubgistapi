@@ -6,6 +6,11 @@ app = FastAPI(title="GitHub Gists API", description="Returns public gists for a 
 GITHUB_API_BASE = "https://api.github.com"
 
 
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
+
 @app.get("/{username}")
 async def get_user_gists(
     username: str,
